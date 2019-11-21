@@ -6,7 +6,7 @@ The texture synthesis using CNNs proposed by Gatys can produce impressive result
 
 As will be shown below, the synthesis results using multi-scale pipeline will produce better results in maintain the large scale structure of texture. First, we down sample the texture sample image in size $[w,h]$ by a ratio 2 over $L-1$ times, thus build a $L$ layer image pyramid, in which the original texture image will be on $l_{L-1}$ layer, and the $L_0$ layer with minimum resolution $[\frac{w}{L-1}, frac{h}{L-1}]$. Second, we initial a noise image in size $[\frac{w}{L-1}, frac{h}{L-1}]$, and synthesize it by optimizing the Gram Loss computed with  texture sample in $l_{L-1}$ layer. Third, we up sample the synthesized texture by ratio 2, and continue to optimize the Gram Loss, until the current texture size reach target size.   
 
-### Multi-scale synthesis pipeline benefits maintain the large scale structure
+### Multi-scale synthesis pipeline is condusive to maintain the large scale structure
 
 <table>
 	<tr>
@@ -14,22 +14,22 @@ As will be shown below, the synthesis results using multi-scale pipeline will pr
 		<th><center> Synthesized image </center></th>
 	</tr>
 	<tr>
-		<th rowspan='3' valign="middle">
+		<th rowspan='3' align="middle">
 			<center><img src = "./imgs/fire.png"></center>
 		</th>
-        <td>
+        <td align = "middle">
 			<center><img src = "./results/fire_1_1024_2048_101.0.png" weight = '40px'></center>
             <center>L = 1</center>
 		</td>
 	</tr>
 	<tr>
-        <td>
+        <td align = "middle">
 			<center><img src = "./results/fire_3_1024_2048_136.5.png" weight = '40px'></center>
             <center>L = 3</center>
 		</td>
 	</tr>
 	<tr>
-        <td>
+        <td align = "middle">
 			<center><img src = "./results/fire_6_1024_2048_147.9.png" weight = '100px'></center>
             <center>L = 6</center>
 		</td>
